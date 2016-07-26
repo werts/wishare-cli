@@ -1,0 +1,26 @@
+{
+  "name": "wishare-cli",
+  "version": "0.0.0",
+  "description": "Used to bootstrap gulp with args",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/werts/wishare-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "liftoff"
+  ],
+  "author": "werts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/werts/wishare-cli/issues"
+  },
+  "homepage": "https://github.com/werts/wishare-cli#readme",
+  "devDependencies": {
+    "liftoff": "^2.2.5"
+  }
+}
