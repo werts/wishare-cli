@@ -1,1 +1,0 @@
-var liftoff = require('liftoff');
