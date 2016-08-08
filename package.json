@@ -1,6 +1,6 @@
 {
   "name": "wishare-cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Used to bootstrap gulp with args",
   "main": "index.js",
   "scripts": {
