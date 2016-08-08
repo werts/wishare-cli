@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 'use strict'
+
 /**
  * 用于构建使用的命令行插件
  */
