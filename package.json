@@ -15,7 +15,7 @@
     "liftoff"
   ],
   "bin": {
-    "wishare": "bin/wishare"
+    "wishare": "bin/wishare.js"
   },
   "author": "werts",
   "license": "MIT",
