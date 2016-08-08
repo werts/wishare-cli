@@ -35,3 +35,6 @@ rollback version.Note:must have the version updated
 $ wishare version 0.0.2
 
 ```
+
+## License
+MIT
