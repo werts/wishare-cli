@@ -4,7 +4,7 @@ wishare-cli
 ### Introduce
 wishare,一款命令行工具,用于winFED
 ### Lists
-- [admin-panel](./admin-panel.md) admin-panel 用于生成一款基于angular.js、bootstrap的后台框架
+- [admin-panel](./admin-panel.md) 用于生成一款基于angular.js、bootstrap的后台框架
 
 
 ## Install
