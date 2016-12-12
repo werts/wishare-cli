@@ -5,3 +5,8 @@
  */
 const adminPanel = require('./admin-panel');
 const winMock = require('./win-mock');
+
+module.exports = {
+	adminPanel,
+	winMock
+};
