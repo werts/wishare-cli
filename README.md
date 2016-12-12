@@ -24,7 +24,7 @@ wishare -v
 ```
 - 命令使用
 ```bash
-wishare <command> \[args\]
+wishare <command> [args]
 ```
 
 ### About
