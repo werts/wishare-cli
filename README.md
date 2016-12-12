@@ -3,41 +3,20 @@ wishare-cli
 
 ### Introduce
 wishare,一款命令行工具,用于winFED
-### Lists
-- [admin-panel](docs/admin-panel.md) 用于生成一款基于angular.js、bootstrap的后台框架
 
+### Application Lists
+- [admin-panel](docs/admin-panel.md) 用于生成一款基于angular.js、bootstrap的后台框架
+- [win-mock](docs/win-mock.md) 一款前端数据模拟工具
 
 ## Install
 
 ```bash
-
 $ npm i -g wishare-cli
-
 ```
 
-## Usage
-update via patch
-```bash
+### About
+wishare: we share, share wisdom
 
-$ wishare patch
+### Lisence
+MIT
 
-```
-update via minor
-```bash
-
-$ wishare minor
-
-```
-update via major
-```bash
-
-$ wishare major
-
-```
-
-rollback version.Note:must have the version updated
-```bash
-
-$ wishare version 0.0.2
-
-```
