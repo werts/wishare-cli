@@ -10,7 +10,7 @@ wishare,一款命令行工具,用于winFED
 
 ## Install
 ```bash
-$ npm i -g wishare-cli
+$ npm install -g wishare-cli
 ```
 
 ### Usage
