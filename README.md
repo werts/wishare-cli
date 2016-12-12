@@ -1,6 +1,12 @@
 wishare-cli
 ===========
 
+### Introduce
+wishare,一款命令行工具,用于winFED
+### Lists
+- [admin-panel](./admin-panel.md) admin-panel 用于生成一款基于angular.js、bootstrap的后台框架
+
+
 ## Install
 
 ```bash
@@ -35,6 +41,3 @@ rollback version.Note:must have the version updated
 $ wishare version 0.0.2
 
 ```
-
-## License
-MIT

@@ -9,9 +9,15 @@ const exec = require('child_process').exec;
 const chalk = require('chalk');
 const log = require('log-util');
 const program = require('commander');
+const path = require('path');
+const co = require('co');
+const co-fs = require('co-fs');
+
+//current work path
+const cwd = process.cwd();
 
 //默认使用当前路径下的gulpfile.js
-let filepath = './gulpfile.js';
+let filepath = path.join(cwd, 'gulpfile.js');
 
 const chooseFile = (filename) => {
     if (filename) {
@@ -20,28 +26,36 @@ const chooseFile = (filename) => {
     return filepath;
 };
 
-/**
- * support: wishare patch/minor/major/version的命令调用
- * 
- */
-program.version('0.0.1')
-    .option('-b, --build', 'build static resources')
-    .option('-s, --send', 'send config file name to backend');
+program.version('0.0.1');
 
 /**
- * build at patch
+ * build static resources
  */
-program.command('patch')
-    .alias('pa')
-    .description('build at patch!')
-    .option('-f, --file', 'select gulpfile to build')
+program.command('build')
+    .alias('b')
+    .description('build static resources...')
+    .option('-f, --file <file>', 'select gulpfile to build')
+    .option('-p, --patch', 'build at patch...')
+    .option('-m, --minor', 'build at minor...')
+    .option('-M, --major', 'build at major...')
+    .option('-v, --ver <ver>', 'build at special version...')
     .action(function(options) {
-        if (typeof options == 'string') {
+        let mod;
+        if (undefined != options.file) {
             //选用了文件
-            filepath = options;
+            filepath = options.file;
         }
-        exec('gulp build:patch ' + filepath, function(err){
-            if (err){
+        if (options.patch){
+            mod = 'patch';
+        }
+        if (options.minor){
+            mod = 'minor';
+        }
+        if (options.major){
+            mod = 'major';
+        }
+        exec('gulp build:' + mod + 'patch --gulpfile' + filepath, function(err) {
+            if (err) {
                 console.log(err);
             }
         });
@@ -53,67 +67,11 @@ program.command('patch')
         console.log();
     });
 
-/**
- * build at minor
- */
-program.command('minor')
-    .alias('mi')
-    .description('build at minor!')
-    .option('-f, --file', 'select gulpfile to build')
-    .action(function(options) {
-        if (typeof options == 'string') {
-            //选用了文件
-            filepath = options;
-        }
-        exec('gulp build:minor ' + filepath, function(err){
-            if (err){
-                console.log(err);
-            }
-        });
-    })
-    .on('--help', function() {
-        console.log('  Examples:');
-        console.log();
-        console.log('    $ wishare minor|mi [-f] [filepath]');
-        console.log();
-    });
-
-/**
- * build at major
- */
-program.command('major')
-    .alias('ma')
-    .description('build at major!')
-    .option('-f, --file', 'select gulpfile to build')
-    .action(function(options) {
-        if (typeof options == 'string') {
-            //选用了文件
-            filepath = options;
-        }
-        exec('gulp build:major ' + filepath, function(err){
-            if (err){
-                console.log(err);
-            }
-        });
-    })
-    .on('--help', function() {
-        console.log('  Examples:');
-        console.log();
-        console.log('    $ wishare major|ma [-f] [filepath]');
-        console.log();
-    });
-
-/**
- * build at special version
- */
-program.command('version', 'build at special version!')
-    .action();
-
 program.on('--help', function() {
     console.log('  Examples:');
     console.log('');
-    console.log('    $ custom-help --help');
-    console.log('    $ custom-help -h');
+    console.log('    $ wishare --help');
+    console.log('    $ wishare -h');
     console.log('');
 });
 
