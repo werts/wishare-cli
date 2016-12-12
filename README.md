@@ -6,7 +6,7 @@ wishare,一款命令行工具,用于winFED
 
 ### Application Lists
 - [admin-panel](docs/admin-panel.md) 用于生成一款基于angular.js、bootstrap的后台框架
-- [win-mock](docs/win-mock.html) 一款前端数据模拟工具
+- [win-mock](docs/win-mock.md) 一款前端数据模拟工具
 
 ## Install
 ```bash
