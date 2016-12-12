@@ -12,6 +12,7 @@ const program = require('commander');
 const path = require('path');
 const co = require('co');
 const co-fs = require('co-fs');
+const commands = require('./commands');
 
 //current work path
 const cwd = process.cwd();
