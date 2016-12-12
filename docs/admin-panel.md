@@ -1,4 +1,5 @@
-### admin-generator
+admin-generator
+---
 
 ### Usage
 - install
