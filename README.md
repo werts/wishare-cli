@@ -27,6 +27,9 @@ wishare -v
 wishare <command> [args]
 ```
 
+### Runtime
+当前测试使用的node版本为4.4.4，npm版本为2.15.1
+
 ### About
 wishare: we share, share wisdom
 
