@@ -1,0 +1,13 @@
+.app-aside{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 190px;
+	bottom: 0;
+	background-color: floralwhite;
+}
+h4{
+	border-bottom: 1px solid #fff;
+	line-height: 1.5;
+	text-align: center;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "win-mock",
+  "version": "1.0.0",
+  "description": "win-mock visual",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WinFED/win-mock.git"
+  },
+  "keywords": [
+    "vue",
+    "node",
+    "express"
+  ],
+  "author": "werts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WinFED/win-mock/issues"
+  },
+  "homepage": "https://github.com/WinFED/win-mock#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "vue-resource": "^1.0.3"
+  }
+}

@@ -1,0 +1,13 @@
+<aside class="app-aside">
+	<router-link to="/dashboard">
+		<h4>Win-mock</h4></router-link>
+	<div class="title text-center">
+		工程列表<span class="glyphicon glyphicon-plus pull-right" @click="toggleInput()"></span>
+	</div>
+	<div class="" v-if="isEdit">
+		<input type="text" name="project" id="project" value="" @keyup.enter="addProject()" />
+	</div>
+	<ul class="list-group">
+		<li class="list-group-item" @click="getCategory(cat.name)" v-for="cat in cats">{{cat.name}}</li>
+	</ul>
+</aside>

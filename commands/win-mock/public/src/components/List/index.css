@@ -1,0 +1,14 @@
+.app-lists{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	width: 240px;
+}
+.app-lists-content{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 240px;
+	right: 0;
+}
