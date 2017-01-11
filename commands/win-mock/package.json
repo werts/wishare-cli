@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/WinFED/win-mock#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "lowdb": "^0.14.0",
     "vue-resource": "^1.0.3"
   }
 }

@@ -1,13 +1,27 @@
 <aside class="app-aside">
-	<router-link to="/dashboard">
-		<h4>Win-mock</h4></router-link>
-	<div class="title text-center">
-		工程列表<span class="glyphicon glyphicon-plus pull-right" @click="toggleInput()"></span>
-	</div>
-	<div class="" v-if="isEdit">
-		<input type="text" name="project" id="project" value="" @keyup.enter="addProject()" />
-	</div>
-	<ul class="list-group">
-		<li class="list-group-item" @click="getCategory(cat.name)" v-for="cat in cats">{{cat.name}}</li>
-	</ul>
+    <router-link to="/dashboard">
+        <h4>Win-mock</h4>
+    </router-link>
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">Quick Access</div>
+        <div class="panel-body">
+            <div class="btn-group btn-group-justified">
+                <span class="btn btn-default">Start</span><span class="btn btn-default">Flush</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label">工程列表</label>
+        <span class="glyphicon glyphicon-plus pull-right" @click="toggleInput()"></span>
+    </div>
+    <div class="" v-if="isEdit">
+        <form role="form">
+            <div class="form-group">
+                <input type="text" name="project" id="project" value="" @keyup.enter="addProject()" class="form-control" placeholder="press enter to add." />
+            </div>
+        </form>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item" @click="getCategory(cat.name)" v-for="cat in cats">{{cat.name}}</li>
+    </ul>
 </aside>
