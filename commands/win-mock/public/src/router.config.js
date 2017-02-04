@@ -3,6 +3,7 @@ import AppCategory from './components/Category/Category.vue'
 import AppList from './components/List/List.vue'
 import AppInterface from './components/Interface/Interface.vue'
 import AppDashboard from './components/Dashboard/Dashboard.vue'
+import Welcome from './Welcome.vue'
 
 const routes = [{
 	path: '/',
@@ -25,6 +26,9 @@ const routes = [{
 		path: '/dashboard',
 		name: 'dashboard',
 		component: AppDashboard
+	}, {
+		path: '',
+		component: Welcome
 	}]
 }];
 
